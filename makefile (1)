@@ -1,0 +1,8 @@
+ecuaciones.png : grafico.py euler1.dat euler2.dat euler3.dat implicito1.dat implicito2.dat implicito3.dat
+	python grafico.py
+	
+euler1.dat euler2.dat euler3.dat implicito1.dat implicito2.dat implicito3.dat : ecuaciones.x
+	./ecuaciones.x
+	
+ecuaciones.x : ecuaciones.cpp
+	c++ ecuaciones.cpp -o ecuaciones.x
